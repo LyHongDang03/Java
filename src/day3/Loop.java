@@ -32,7 +32,7 @@ public class Loop {
         if (n < 1) {
             return false;
         }
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {  // 5
                 return false;
             }
@@ -75,5 +75,23 @@ public class Loop {
         }
         return dem;
     }
-    
+    public void printIsPrime(int n){
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+    public boolean isPalindrome(int x){
+        String s = String.valueOf(x);
+        String reversed = new StringBuilder(s).reverse().toString();
+        return reversed.equals(s);
+    }
+    public void palindrome(int x){
+        for (int i = 1; i <= x; i++) {
+            if (isPalindrome(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
 }
