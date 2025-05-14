@@ -94,4 +94,18 @@ public class Loop {
             }
         }
     }
+    public int findGCD (int a, int b){
+        if (b == 0){
+            return a;
+        }
+        while(b!=0){
+            int temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
+    }
+    public int findBCN(int a, int b){
+        return Math.abs(a * b)/ findGCD(a, b);
+    }
 }
