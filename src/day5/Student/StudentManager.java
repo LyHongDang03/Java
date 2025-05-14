@@ -10,8 +10,10 @@ public class StudentManager {
         students.add(student);
     }
 
-    public List<Student> getStudents() {
-        return students;
+    public void getStudents() {
+       for (Student student : students) {
+           System.out.println(student);
+       }
     }
 
     public Student findTopStudent() {
